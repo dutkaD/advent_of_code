@@ -1,7 +1,7 @@
 package day5
 
 import (
-	"advent_of_code/src/utils"
+	"advent_of_code/utils"
 	"strconv"
 	"strings"
 )

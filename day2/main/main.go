@@ -1,8 +1,8 @@
 package main
 
 import (
-	"advent_of_code/src/day2"
-	"advent_of_code/src/utils"
+	"advent_of_code/day2"
+	"advent_of_code/utils"
 	"fmt"
 )
 
