@@ -8,7 +8,7 @@ import (
 
 func main() {
 	lines := utils2.ReadFile("../input.txt")
-	numbers := stringsToInts(lines)
+	numbers := utils2.StringsToInts(lines)
 	// part 1
 	fmt.Println(day1.GetIncreased(numbers))
 	//part 2
@@ -16,10 +16,3 @@ func main() {
 
 }
 
-func stringsToInts(stringVals []string) []int {
-	var nums []int
-	for _, s := range stringVals {
-		nums = append(nums, utils2.ToInt(s))
-	}
-	return nums
-}
