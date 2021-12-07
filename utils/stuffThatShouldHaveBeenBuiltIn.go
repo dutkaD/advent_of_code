@@ -1,6 +1,8 @@
 package utils
 
-import "strconv"
+import (
+	"strconv"
+)
 
 func Abs(x int) int {
 	if x < 0 {
@@ -28,6 +30,19 @@ func ToInt(s string) int {
 	return i
 }
 
+func MinValue(numbers []int) (i int) {
+	if len(numbers) > 0 {
+		min := numbers[0]
+		for x := 0; x < len(numbers); x++ {
+			if numbers[x] < min {
+				min = numbers[x]
+			}
+		}
+		return min
+	}
+	return
+}
+
 func Sum(ints []int) int {
 	sum := 0
 	for n := 0; n < len(ints); n++ {
@@ -35,7 +50,6 @@ func Sum(ints []int) int {
 	}
 	return sum
 }
-
 
 func StringsToInts(stringVals []string) []int {
 	var nums []int
