@@ -1,7 +1,9 @@
 package utils
 
 import (
+	"sort"
 	"strconv"
+	"strings"
 )
 
 func Abs(x int) int {
@@ -57,4 +59,19 @@ func StringsToInts(stringVals []string) []int {
 		nums = append(nums, ToInt(s))
 	}
 	return nums
+}
+
+func Contains(s []string, e string) bool {
+	for _, a := range s {
+		if a == e {
+			return true
+		}
+	}
+	return false
+}
+
+func SortString(w string) string {
+	s := strings.Split(w, "")
+	sort.Strings(s)
+	return strings.Join(s, "")
 }
